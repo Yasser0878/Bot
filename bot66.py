@@ -9,11 +9,11 @@ from datetime import datetime, timedelta
 import threading
 import telebot
 
-bot_token = '7714218747:AAFqp0sNUk-33uYfM9ARdnWo06o_hCXwZVU'
+bot_token = '6824190995:AAHb_NbY0srdBWm8rMYnWgK31sDtn-exo6E'
 bot = telebot.TeleBot(bot_token)
 user_data = {}
-allowed_users = ['7594179390']
-admin_id = '7594179390'
+allowed_users = [1497253321']
+admin_id = 1497253321'
 subscription_data = {}
 
 keyboard = telebot.types.InlineKeyboardMarkup(row_width=2)
@@ -55,9 +55,9 @@ def start(message):
     user_id = str(message.from_user.id)
     if user_id in allowed_users:
         add_user_to_data(user_id)
-        bot.reply_to(message, 'اهلا بك في بوت الرفع الخارجي المطورين @AG_C_3 , شرح البوت تابعه قبل لا تبدي ', reply_markup=keyboard)
+        bot.reply_to(message, 'اهلا بك في بوت الرفع الخارجي المطورين @y_9ame, شرح البوت تابعه قبل لا تبدي ', reply_markup=keyboard)
     else:
-        bot.reply_to(message, 'انت غير مشترك في البوت للاشتراك في البوت : @AG_C_3' )
+        bot.reply_to(message, 'انت غير مشترك في البوت للاشتراك في البوت : @y_9ame' )
 
 
 @bot.message_handler(commands=['stop'])
@@ -72,7 +72,7 @@ def stop(message):
 
 @bot.message_handler(commands=['admin'])
 def show_admin_commands(message):
-    if str(message.from_user.id) == '7594179390':  
+    if str(message.from_user.id) == 1497253321':  
         bot.send_message(message.chat.id, 'اختر الأمر الذي ترغب في تنفيذه:', reply_markup=admin_keyboard)
     else:
         bot.reply_to(message, 'أنت لست مطورًا مصرحًا')
